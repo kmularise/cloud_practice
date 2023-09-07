@@ -11,7 +11,6 @@ public class TestController {
     @RequestMapping("/hello")
     public HelloDto responseJSON() {
         HelloDto helloDto = new HelloDto("hello-world");
-        fddfdfsdkfdjsljkds
         return helloDto;
     }
 }
