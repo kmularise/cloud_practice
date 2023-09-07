@@ -20,7 +20,7 @@ class TestControllerTest {
     @DisplayName("sample test")
     void testSample() throws Exception {
         //given
-        String value = "hello-world";
+        String value = "hello-world1";
         //when
 
         //then
