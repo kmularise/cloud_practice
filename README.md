@@ -11,3 +11,6 @@
 ```
 
 ## Mission 2
+Mission 1 에서 만든 프로젝트에 각자가 정한 룰에 맞는 CI 를 자유롭게 적용한다. (Github Actions, Jenkins 또는 다른 툴 이용)
+
+
