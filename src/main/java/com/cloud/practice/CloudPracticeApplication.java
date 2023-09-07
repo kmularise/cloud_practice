@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class CloudPracticeApplication {
 
-	public static void min(String[] args) {
+	public static void main(String[] args) {
 		SpringApplication.run(CloudPracticeApplication.class, args);
 	}
 
