@@ -10,7 +10,6 @@ public class TestController {
     @ResponseBody
     @RequestMapping("/hello")
     public HelloDto responseJSON() {
-        HelloDto helloDto = new HelloDto("hello-world");
-        return helloDto;
+        return new HelloDto("hello-world");
     }
 }

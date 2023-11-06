@@ -5,6 +5,10 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Stream;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +26,8 @@ class TestControllerTest {
         //given
         String value = "hello-world";
         //when
+        List<Integer> ddd = new ArrayList<>();
+        Stream<Integer> stream = ddd.stream();
 
         //then
         mock.perform(get("/hello"))
