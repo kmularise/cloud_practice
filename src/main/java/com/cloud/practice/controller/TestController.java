@@ -1,6 +1,6 @@
 package com.cloud.practice.controller;
 
-import com.cloud.practice.HelloDto;
+import com.cloud.practice.dto.HelloDto;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;

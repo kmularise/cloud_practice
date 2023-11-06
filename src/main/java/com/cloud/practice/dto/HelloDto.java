@@ -1,4 +1,4 @@
-package com.cloud.practice;
+package com.cloud.practice.dto;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -8,8 +8,8 @@ import lombok.ToString;
 
 @ToString
 @AllArgsConstructor
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@Getter
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class HelloDto {
-    @Getter
     private String result;
 }
