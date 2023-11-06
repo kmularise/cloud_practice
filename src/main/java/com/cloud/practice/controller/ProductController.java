@@ -2,6 +2,7 @@ package com.cloud.practice.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -28,9 +29,11 @@ public class ProductController {
 			.body(productAddResponse);
 	}
 
-	@PutMapping("/product/{id}")
-	public ProductPurchaseResponse purchase(@PathVariable Long id, @RequestBody ProductPurchaseRequest productPurchaseRequest) {
-		return productService.decreaseQuantity(id, productPurchaseRequest.getQuantity());
+	@PatchMapping("/product/{id}")
+	public ResponseEntity<ProductPurchaseResponse> purchase(@PathVariable Long id, @RequestBody ProductPurchaseRequest productPurchaseRequest) {
+		ProductPurchaseResponse productPurchaseResponse = productService.decreaseQuantity(id, productPurchaseRequest.getQuantity());
+		return ResponseEntity.status(HttpStatus.OK)
+			.body(productPurchaseResponse);
 	}
 
 }

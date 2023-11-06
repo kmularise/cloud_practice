@@ -22,6 +22,7 @@ public class ProductService {
 
 	public ProductAddResponse create(ProductAddRequest productRequest) {
 		Product product = productRequest.toProduct();
+		System.out.println("product.getStockQuantity() = " + product.getStockQuantity());
 		productRepository.save(product);
 		return new ProductAddResponse(product);
 	}
