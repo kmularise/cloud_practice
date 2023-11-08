@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [feat-6-add-product-domain]
+    branches: [test]
   pull_request:
-    branches: [feat-6-add-product-domain]
+    branches: [test]
   workflow_dispatch:
 
 jobs:
