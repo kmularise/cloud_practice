@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches: [feat-6-add-product-domain]
+  pull_request:
+    branches: [feat-6-add-product-domain]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: test
+        uses: actions/checkout@v3
+        run: |
+          echo "hello" > ./test/hello.txt
+          cat ./test/hello.txt
+          echo "hello" > ./nothing/euijin.txt
+          cat ./nothing/euijin.txt
+      - name: Add & Commit
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: 'test'
+          message: 'chore: txt'
+          ref: "feat-6-add-product-domain"
+          push: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#      - name: Push commit
+#        uses: ad-m/github-push-action@master
+#        with:
+#          github_token: ${{ secrets.GITHUB_TOKEN }}
+#          branch: "feat-6-add-product-domain"
+#          force: true
+          
+      
